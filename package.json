@@ -1,0 +1,24 @@
+{
+  "name": "tiendavirtualjireth",
+  "version": "1.0.0",
+  "description": "Tienda virtual de productos de seguridad",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Armandorace/TiendaVirtualJireth.git"
+  },
+  "author": "Armando Racero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Armandorace/TiendaVirtualJireth/issues"
+  },
+  "homepage": "https://github.com/Armandorace/TiendaVirtualJireth#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mangosta": "^1.0.1"
+  }
+}
