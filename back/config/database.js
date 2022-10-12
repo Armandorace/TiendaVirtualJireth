@@ -5,9 +5,8 @@ const connectDatabase = () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(con => {
-        console.log(` Base de datos mongo conectado con el servidor: ${con.connection.host}`)
+        console.log(`Base de datos mongo conectada con el servidor: ${con.connection.host}`)
     })
 }
 
 module.exports=connectDatabase;
-//

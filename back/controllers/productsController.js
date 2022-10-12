@@ -4,3 +4,4 @@ exports.getProducts=(req,res,next) => {
         message: "En esta ruta ud va a poder ver todos los productos"
     })
 }
+
