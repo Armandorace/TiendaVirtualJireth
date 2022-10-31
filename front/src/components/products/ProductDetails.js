@@ -1,7 +1,26 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import MetaData from "../layout/MetaData"
+import { useParams } from 'react-router-dom'
+import { clearErrors, getProductsDetails } from '../../actions/productActions'
+import { useAlert } from 'react-alert'
 
 export const ProductDetails = () => {
+  const {loading, product, error} = useSelector(state =>state.productDetails)
+  const {id} =useParams();
+  const dispatch= useDispatch();
+  const alert= useAlert();
+  
+  useEffect(() => {
+    dispatch(getProductsDetails(id))
+    if (error){
+      alert.error(error);
+      dispatch(clearErrors())
+    }
+
+  }, [dispatch, alert, error, id])
+ 
+
   return (
     <Fragment>
         <MetaData title="Camaras de Seguridad"></MetaData>
