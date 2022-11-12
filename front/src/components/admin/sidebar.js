@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const sidebar = () => {
+export const Sidebar = () => {
   return (
     <div className='sidebar-wrapper'>
         <nav id='sidebar'>
             <ul className='list-unstyled components'>
                 <li>
-                    <Link to="/"> <i className='fa fa-tachometer'></i>Adiministracion</Link>
+                    <Link to="/admin/dashboard"> <i className='fa fa-tachometer'></i>Adiministracion</Link>
                 </li>
                 {/*Botones de productos*/}
                 <li>
@@ -23,8 +23,20 @@ export const sidebar = () => {
                     </ul>
                 </li>
                 {/*Botones de Pedidos*/}
+                <li>
+                    <Link to="/"><i className='fa fa-shopping-basket'></i>Pedidos</Link>
+                </li>
+                 {/*Botones de usuarios*/}
+                 <li>
+                    <Link to="/"><i className='fa fa-users'></i>Usuarios</Link>
+                </li>
+                 {/*Botones de Opiniones*/}
+                 <li>
+                    <Link to="/"><i className='fa fa-users'></i>Reviews</Link>
+                </li>
             </ul>
         </nav>
     </div>
   )
 }
+export default Sidebar
